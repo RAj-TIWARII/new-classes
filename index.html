@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bhide Tuition Classes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #f4f4f4; }
+        .hero-section { background: url('https://source.unsplash.com/1600x900/?education,classroom') center/cover no-repeat; padding: 100px 20px; color: white; text-align: center; }
+        .hero-overlay { padding: 60px; border-radius: 10px; background: rgba(0, 0, 0, 0.6); }
+        .section { padding: 80px 20px; }
+        .colored-section { background: linear-gradient(135deg, #8e44ad, #3498db); color: #fff; }
+        .table-striped tbody tr:nth-of-type(odd) { background-color: rgba(255, 159, 64, 0.2); }
+        .btn-custom { background: #ff758c; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; }
+        .btn-custom:hover { background: #ff5277; }
+        .teacher-img { width: 250px; border-radius: 50%; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">📚 Bhide Tuition</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#enquiry">Enquiry</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="hero-overlay">
+            <h1>Welcome to Bhide Tuition Classes</h1>
+            <p>Shaping bright futures with expert guidance for 5th to 12th-grade students.</p>
+            <a href="#enquiry" class="btn-custom">Enroll Now</a>
+        </div>
+    </section>
+
+    <section id="about" class="section container text-center">
+        <h2>About Our Classes</h2>
+        <img src="https://source.unsplash.com/300x300/?teacher" class="teacher-img mt-3" alt="Teacher Bhide">
+        <p class="mt-3">At Bhide Tuition, we believe in discipline, structured learning, and academic excellence. Led by Atmaram Tukaram Bhide, we ensure top-quality education for students of all levels.</p>
+    </section>
+
+    <section id="courses" class="colored-section text-center">
+        <div class="container">
+            <h2>Our Courses</h2>
+            <div class="row mt-4">
+                <div class="col-md-4"><i class="fas fa-calculator fa-3x"></i><p>Mathematics (All Grades)</p></div>
+                <div class="col-md-4"><i class="fas fa-flask fa-3x"></i><p>Science (Physics, Chemistry, Biology)</p></div>
+                <div class="col-md-4"><i class="fas fa-book fa-3x"></i><p>Commerce & Economics (11th-12th)</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="section container">
+        <h2 class="text-center">Class Schedule</h2>
+        <table class="table table-bordered table-striped">
+            <thead class="bg-dark text-white">
+                <tr>
+                    <th>Grade</th>
+                    <th>Time Slot</th>
+                    <th>Subjects Covered</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>5th - 7th</td><td>10:00 AM - 12:00 PM</td><td>Math, Science, English</td></tr>
+                <tr><td>8th - 10th</td><td>1:00 PM - 3:00 PM</td><td>Math, Science, Social Studies, English</td></tr>
+                <tr><td>11th - 12th</td><td>4:00 PM - 6:00 PM</td><td>Physics, Chemistry, Math, Commerce</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="gallery" class="colored-section text-center">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="row">
+                <div class="col-md-4"><img src="https://source.unsplash.com/300x200/?students" class="img-fluid" alt="Students"></div>
+                <div class="col-md-4"><img src="https://source.unsplash.com/300x200/?books" class="img-fluid" alt="Books"></div>
+                <div class="col-md-4"><img src="https://source.unsplash.com/300x200/?classroom" class="img-fluid" alt="Classroom"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section text-center">
+        <div class="container">
+            <h2>What Our Students Say</h2>
+            <blockquote>"Bhide sir's teaching style is excellent! I scored top marks." - Rahul Mehta</blockquote>
+            <blockquote>"The best tuition for students aiming for success!" - Pooja Sharma</blockquote>
+        </div>
+    </section>
+
+    <section id="enquiry" class="section container">
+        <h2 class="text-center">Enquiry Form</h2>
+        <p class="text-center">Have questions? Fill in the form below, and we will get back to you.</p>
+    </section>
+
+    <footer class="bg-dark text-white text-center p-3">
+        <p>&copy; 2025 Bhide Tuition Classes | All Rights Reserved</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
