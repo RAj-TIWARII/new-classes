@@ -124,12 +124,12 @@
   <!-- Mobile Menu -->
   <div class="mobile-nav" id="mobileNav">
     <ul class="list-group list-group-flush">
-      <li class="list-group-item"><a href="#">HOME</a></li>
-      <li class="list-group-item"><a href="#">CLASSES</a></li>
-      <li class="list-group-item"><a href="#">SCHEDULE</a></li>
-      <li class="list-group-item"><a href="#">SYLLABUS</a></li>
-      <li class="list-group-item"><a href="#">ANNOUNCEMENT</a></li>
-      <li class="list-group-item"><a href="#">HOLIDAYS</a></li>
+      <li class="list-group-item"><a href="index.html">HOME</a></li>
+      <li class="list-group-item"><a href="syllabus.html">CLASSES</a></li>
+      <li class="list-group-item"><a href="syllabus.html">SCHEDULE</a></li>
+      <li class="list-group-item"><a href="syllabus.html">SYLLABUS</a></li>
+      <li class="list-group-item"><a href="announcements.html">ANNOUNCEMENT</a></li>
+      <li class="list-group-item"><a href="hoidays.html">HOLIDAYS</a></li>
       <li class="list-group-item"><a class="btn btn-primary w-100" href="studentlogin.html">STUDENT LOGIN</a></li>
     </ul>
   </div>
@@ -327,6 +327,69 @@
       </div>
     </section>
   </div>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Enquiry Form</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card shadow">
+            <div class="card-body">
+              <form>
+                <div class="mb-3">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" class="form-control" placeholder="Enter your full name" required>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" placeholder="Enter your phone number" required>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Select Class</label>
+                  <select class="form-select" required>
+                    <option selected disabled>Choose your class</option>
+                    <option>Class 6</option>
+                    <option>Class 7</option>
+                    <option>Class 8</option>
+                    <option>Class 9</option>
+                    <option>Class 10</option>
+                    <option>Class 11</option>
+                    <option>Class 12</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Select Subject</label>
+                  <select class="form-select" required>
+                    <option selected disabled>Choose a subject</option>
+                    <option>Mathematics</option>
+                    <option>Science</option>
+                    <option>English</option>
+                    <option>Social Studies</option>
+                    <option>Hindi</option>
+                    <option>Physics</option>
+                    <option>Chemistry</option>
+                    <option>Biology</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Your Message</label>
+                  <textarea class="form-control" rows="4" placeholder="Enter your message" required></textarea>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
 
   <!-- Scroll to Top Button -->
   <button id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
