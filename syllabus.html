@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syllabus Details - Tuition Classes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Fixed Navbar */
+    .navbar {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1050;
+    }
+    .content {
+      padding-top: 90px; 
+    }
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #fff;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+      transition: left 0.3s ease;
+      z-index: 1050;
+    }
+    .mobile-nav.active {
+      left: 0;
+    }
+    /* Scroll to Top Button */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      z-index: 100;
+      display: none;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    /* Dark Mode */
+    body.dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    body.dark-mode .card {
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+    }
+    body.dark-mode .navbar,
+    body.dark-mode .mobile-nav {
+      background-color: #1e1e1e;
+    }
+    body.dark-mode .table {
+      color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Desktop Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-none d-lg-flex">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="fas fa-graduation-cap"></i> Tuition Classes</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">CLASSES</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">SCHEDULE</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">SYLLABUS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">ANNOUNCEMENT</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">HOLIDAYS</a></li>
+        </ul>
+        <button class="btn btn-primary me-3"><a href="studentlogin.html">STUDENT LOGIN</a></button>
+        <!-- Dark/Light Toggle Switch -->
+        <div class="form-check form-switch text-white">
+          <input class="form-check-input" type="checkbox" id="themeToggle">
+          <label class="form-check-label" for="themeToggle">
+            <i id="themeIcon" class="fas fa-moon"></i>
+          </label>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navbar -->
+  <nav class="navbar navbar-dark bg-dark d-lg-none">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="fas fa-graduation-cap"></i> Tuition</a>
+      <div>
+        <!-- Dark/Light Toggle in Mobile -->
+        <button class="btn text-white me-2" id="themeToggleMobile">
+          <i id="themeIconMobile" class="fas fa-moon"></i>
+        </button>
+        <button class="btn text-white" id="mobileMenuToggle"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="mobile-nav" id="mobileNav">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><a href="index.html">HOME</a></li>
+      <li class="list-group-item"><a href="#">CLASSES</a></li>
+      <li class="list-group-item"><a href="#">SCHEDULE</a></li>
+      <li class="list-group-item"><a href="syllabus.html">SYLLABUS</a></li>
+      <li class="list-group-item"><a href="announcements.html">ANNOUNCEMENT</a></li>
+      <li class="list-group-item"><a href="hoidays.html">HOLIDAYS</a></li>
+      <li class="list-group-item"><a class="btn btn-primary w-100" href="studentlogin.html">STUDENT LOGIN</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <div class="container py-5">
+      <h1 class="mb-4 text-center">Syllabus Details</h1>
+
+      <!-- Current Running Syllabus Section -->
+      <section class="mb-5">
+        <h2 class="mb-4"><i class="fas fa-book-open"></i> Current Running Syllabus: Class 12th English</h2>
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://d10lpgp6xz60nq.cloudfront.net/physics_images/hajijujuj.png" class="img-fluid rounded-start" alt="The Third Level">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">The Third Level</h5>
+                <p class="card-text">
+                  In this ongoing chapter, <strong>The Third Level</strong>, students delve into advanced literary analysis, exploring themes, symbolism, and critical interpretation techniques. The chapter challenges learners to think deeply about narrative structures and the evolution of language.
+                </p>
+                <button class="btn btn-primary view-summary" data-bs-toggle="modal" data-bs-target="#chapterModal" data-chapter="The Third Level" data-summary="Detailed Summary of 'The Third Level': Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed interdum nulla. Cras euismod, nulla at laoreet dapibus, odio nibh fermentum sapien, in sagittis erat urna sed orci. Suspendisse potenti. Phasellus consequat, nibh in efficitur interdum, neque velit tristique risus, quis porttitor dui elit id risus.">
+                  View Summary
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--  Chapters Section -->
+      <section class="mb-5">
+        <h2 class="mb-4"><i class="fas fa-book"></i> Additional English Chapters</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <!-- Class 7th English Chapter -->
+          <div class="col">
+            <div class="card h-100">
+              <img src="chapterImage2.png" class="card-img-top" alt="Chapter: The Adventure Begins">
+              <div class="card-body">
+                <h5 class="card-title">Chapter: The Adventure Begins (Class 7th)</h5>
+                <p class="card-text">A captivating introduction to literature that sparks curiosity and encourages creative exploration.</p>
+                <button class="btn btn-primary view-summary" data-bs-toggle="modal" data-bs-target="#chapterModal" data-chapter="The Adventure Begins" data-summary="Detailed Summary of 'The Adventure Begins': Curabitur vel felis nec dui bibendum pulvinar. Maecenas at orci at leo varius maximus. Nulla facilisi. Pellentesque ac risus ac nunc vehicula tincidunt.">
+                  View Summary
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Class 9th English Chapter -->
+          <div class="col">
+            <div class="card h-100">
+              <img src="chapterImage3.png" class="card-img-top" alt="Chapter: A New Perspective">
+              <div class="card-body">
+                <h5 class="card-title">Chapter: A New Perspective (Class 9th)</h5>
+                <p class="card-text">This chapter opens the door to critical thinking and diverse interpretations of classic texts.</p>
+                <button class="btn btn-primary view-summary" data-bs-toggle="modal" data-bs-target="#chapterModal" data-chapter="A New Perspective" data-summary="Detailed Summary of 'A New Perspective': Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.">
+                  View Summary
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Class 10th English Chapter -->
+          <div class="col">
+            <div class="card h-100">
+              <img src="chapterImage4.png" class="card-img-top" alt="Chapter: Journey Through Words">
+              <div class="card-body">
+                <h5 class="card-title">Chapter: Journey Through Words (Class 10th)</h5>
+                <p class="card-text">An engaging chapter that invites students to explore the art of storytelling and the power of language.</p>
+                <button class="btn btn-primary view-summary" data-bs-toggle="modal" data-bs-target="#chapterModal" data-chapter="Journey Through Words" data-summary="Detailed Summary of 'Journey Through Words': Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?">
+                  View Summary
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Chapter Summary Modal -->
+  <div class="modal fade" id="chapterModal" tabindex="-1" aria-labelledby="chapterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="chapterModalLabel">Chapter Summary</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="chapterSummaryContent"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#mobileMenuToggle').on('click', function(){
+        $('#mobileNav').toggleClass('active');
+      });
+      
+      $('.view-summary').on('click', function(){
+        var chapterTitle = $(this).data('chapter');
+        var chapterSummary = $(this).data('summary');
+        $('#chapterModalLabel').text(chapterTitle + " - Summary");
+        $('#chapterSummaryContent').text(chapterSummary);
+      });
+      
+      $(window).scroll(function(){
+        if ($(this).scrollTop() > 200) {
+          $('#scrollTopBtn').fadeIn();
+        } else {
+          $('#scrollTopBtn').fadeOut();
+        }
+      });
+      $('#scrollTopBtn').click(function(){
+        $('html, body').animate({scrollTop: 0}, 600);
+        return false;
+      });
+      
+      $('#themeToggle').on('change', function(){
+        if($(this).is(':checked')){
+          $('body').addClass('dark-mode');
+          $('#themeIcon').removeClass('fa-moon').addClass('fa-sun');
+        } else {
+          $('body').removeClass('dark-mode');
+          $('#themeIcon').removeClass('fa-sun').addClass('fa-moon');
+        }
+      });
+      
+      $('#themeToggleMobile').on('click', function(){
+        $('body').toggleClass('dark-mode');
+        if($('body').hasClass('dark-mode')){
+          $('#themeIconMobile').removeClass('fa-moon').addClass('fa-sun');
+        } else {
+          $('#themeIconMobile').removeClass('fa-sun').addClass('fa-moon');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

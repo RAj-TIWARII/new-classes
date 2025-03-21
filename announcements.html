@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Announcements - Tuition Classes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+
+    .navbar {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1050;
+    }
+  
+    .content {
+      padding-top: 90px; 
+    }
+
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #fff;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+      transition: left 0.3s ease;
+      z-index: 1050;
+    }
+    .mobile-nav.active {
+      left: 0;
+    }
+    /* Scroll to Top Button */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      z-index: 100;
+      display: none;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    /* Dark Mode Styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    body.dark-mode .card,
+    body.dark-mode .accordion-body {
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+    }
+    body.dark-mode .navbar,
+    body.dark-mode .mobile-nav {
+      background-color: #1e1e1e;
+    }
+    body.dark-mode .table {
+      color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Desktop Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-none d-lg-flex">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="fas fa-graduation-cap"></i> Tuition Classes</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">CLASSES</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">SCHEDULE</a></li>
+          <li class="nav-item"><a class="nav-link" href="syllabus.html">SYLLABUS</a></li>
+          <li class="nav-item"><a class="nav-link active" href="announcements.html">ANNOUNCEMENT</a></li>
+          <li class="nav-item"><a class="nav-link" href="hoidays.html">HOLIDAYS</a></li>
+        </ul>
+        <button class="btn btn-primary me-3">STUDENT LOGIN</button>
+        <!-- Dark/Light Toggle Switch -->
+        <div class="form-check form-switch text-white">
+          <input class="form-check-input" type="checkbox" id="themeToggle">
+          <label class="form-check-label" for="themeToggle">
+            <i id="themeIcon" class="fas fa-moon"></i>
+          </label>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navbar -->
+  <nav class="navbar navbar-dark bg-dark d-lg-none">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="fas fa-graduation-cap"></i> Tuition</a>
+      <div>
+        <!-- Mobile Dark/Light Toggle -->
+        <button class="btn text-white me-2" id="themeToggleMobile">
+          <i id="themeIconMobile" class="fas fa-moon"></i>
+        </button>
+        <button class="btn text-white" id="mobileMenuToggle"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="mobile-nav" id="mobileNav">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><a href="#">HOME</a></li>
+      <li class="list-group-item"><a href="#">CLASSES</a></li>
+      <li class="list-group-item"><a href="#">SCHEDULE</a></li>
+      <li class="list-group-item"><a href="#">SYLLABUS</a></li>
+      <li class="list-group-item"><a class="active" href="#">ANNOUNCEMENT</a></li>
+      <li class="list-group-item"><a href="#">HOLIDAYS</a></li>
+      <li class="list-group-item"><a class="btn btn-primary w-100" href="studentlogin.html">STUDENT LOGIN</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <div class="container py-5">
+      <h1 class="mb-4 text-center"><i class="fas fa-bullhorn"></i> Announcements</h1>
+      
+      <!-- Announcement Item 1 -->
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0"><i class="fas fa-megaphone"></i> New Course Launch</h5>
+          <small>Posted on: 2025-03-25</small>
+        </div>
+        <div class="card-body">
+          <p class="card-text">We are thrilled to announce the launch of our brand new coding course designed exclusively for beginners! Dive into the world of programming with interactive sessions and expert guidance.</p>
+          <p class="card-text">This course will cover basics to advanced topics with hands-on projects, live sessions, and one-on-one mentorship. Spots are limited, so make sure to register early!</p>
+        </div>
+      </div>
+
+      <!-- Announcement Item 2 -->
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-success text-white">
+          <h5 class="mb-0"><i class="fas fa-calendar-check"></i> Updated Schedule</h5>
+          <small>Posted on: 2025-03-20</small>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Due to high demand, we've updated our class schedules to accommodate more sessions throughout the week. Please check the schedule page for the latest timings and course details.</p>
+          <p class="card-text">We are committed to offering flexible learning options to ensure every student finds a time that suits them.</p>
+        </div>
+      </div>
+
+      <!-- Announcement Item 3 -->
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-warning text-dark">
+          <h5 class="mb-0"><i class="fas fa-exclamation-circle"></i> Holiday Notice</h5>
+          <small>Posted on: 2025-03-15</small>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Please note that classes will be suspended on 2025-04-10 in observance of the national holiday. All online resources and recorded sessions will be available for review during the break.</p>
+          <p class="card-text">Enjoy the break and stay tuned for updates on when classes will resume.</p>
+        </div>
+      </div>
+
+      <!-- Announcement Item 4 -->
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-info text-white">
+          <h5 class="mb-0"><i class="fas fa-info-circle"></i> New Feature Release</h5>
+          <small>Posted on: 2025-03-10</small>
+        </div>
+        <div class="card-body">
+          <p class="card-text">We are excited to roll out a new feature on our platform – interactive quizzes! Test your knowledge with real-time quizzes during class and track your progress with detailed analytics.</p>
+          <p class="card-text">This feature is now live on both desktop and mobile versions of our website. Give it a try and let us know your feedback.</p>
+        </div>
+      </div>
+      
+      <!-- Additional Content -->
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-secondary text-white">
+          <h5 class="mb-0"><i class="fas fa-lightbulb"></i> Special Workshop Announcement</h5>
+          <small>Posted on: 2025-03-05</small>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Join us for an exclusive workshop on creative problem solving and critical thinking. This workshop will be led by industry experts and is designed to give you an edge in both academics and life.</p>
+          <p class="card-text">Registration is open now—don’t miss this opportunity to enhance your skills!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <button id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $(document).ready(function(){
+
+      $('#mobileMenuToggle').on('click', function(){
+        $('#mobileNav').toggleClass('active');
+      });
+
+      $(window).scroll(function(){
+        if ($(this).scrollTop() > 200) {
+          $('#scrollTopBtn').fadeIn();
+        } else {
+          $('#scrollTopBtn').fadeOut();
+        }
+      });
+      $('#scrollTopBtn').click(function(){
+        $('html, body').animate({scrollTop: 0}, 600);
+        return false;
+      });
+
+      $('#themeToggle').on('change', function(){
+        if($(this).is(':checked')){
+          $('body').addClass('dark-mode');
+          $('#themeIcon').removeClass('fa-moon').addClass('fa-sun');
+        } else {
+          $('body').removeClass('dark-mode');
+          $('#themeIcon').removeClass('fa-sun').addClass('fa-moon');
+        }
+      });
+
+      $('#themeToggleMobile').on('click', function(){
+        $('body').toggleClass('dark-mode');
+        if($('body').hasClass('dark-mode')){
+          $('#themeIconMobile').removeClass('fa-moon').addClass('fa-sun');
+        } else {
+          $('#themeIconMobile').removeClass('fa-sun').addClass('fa-moon');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
