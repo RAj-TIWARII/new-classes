@@ -6,6 +6,8 @@
   <title>Announcements - Tuition Classes</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <style>
 
     .navbar {
@@ -33,7 +35,7 @@
     .mobile-nav.active {
       left: 0;
     }
-    /* Scroll to Top Button */
+
     #scrollTopBtn {
       position: fixed;
       bottom: 40px;
@@ -48,7 +50,7 @@
       font-size: 20px;
       cursor: pointer;
     }
-    /* Dark Mode Styles */
+
     body.dark-mode {
       background-color: #121212;
       color: #e0e0e0;
@@ -69,7 +71,7 @@
 </head>
 <body>
 
-   <!-- Desktop Navbar -->
+
    <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-none d-lg-flex">
     <div class="container">
       <a class="navbar-brand" href="index.html"><i class="fas fa-graduation-cap"></i> ALL IN ONE </a>
@@ -83,7 +85,6 @@
           <li class="nav-item"><a class="nav-link" href="hoidays.html">HOLIDAYS</a></li>
         </ul>
         <button class="btn btn-primary me-3"><a style="text-decoration: none; color: white;" href="studentlogin.html">STUDENT LOGIN</a></button>
-        <!-- Dark/Light Toggle Switch -->
         <div class="form-check form-switch text-white">
           <input class="form-check-input" type="checkbox" id="themeToggle">
           <label class="form-check-label" for="themeToggle">
@@ -94,12 +95,12 @@
     </div>
   </nav>
 
-  <!-- Mobile Navbar -->
+
   <nav class="navbar navbar-dark bg-dark d-lg-none">
     <div class="container">
       <a class="navbar-brand" href="#"><i class="fas fa-graduation-cap"></i> Tuition</a>
       <div>
-        <!-- Mobile Dark/Light Toggle -->
+
         <button class="btn text-white me-2" id="themeToggleMobile">
           <i id="themeIconMobile" class="fas fa-moon"></i>
         </button>
@@ -108,7 +109,6 @@
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
   <div class="mobile-nav" id="mobileNav">
     <ul class="list-group list-group-flush">
       <li class="list-group-item"><a href="index.html">HOME</a></li>
@@ -127,7 +127,7 @@
     <div class="container py-5">
       <h1 class="mb-4 text-center"><i class="fas fa-bullhorn"></i> Announcements</h1>
       
-      <!-- Announcement Item 1 -->
+-
       <div class="card mb-4 shadow-sm">
         <div class="card-header bg-primary text-white">
           <h5 class="mb-0"><i class="fas fa-megaphone"></i> New Course Launch</h5>
@@ -139,7 +139,7 @@
         </div>
       </div>
 
-      <!-- Announcement Item 2 -->
+-
       <div class="card mb-4 shadow-sm">
         <div class="card-header bg-success text-white">
           <h5 class="mb-0"><i class="fas fa-calendar-check"></i> Updated Schedule</h5>
@@ -151,7 +151,7 @@
         </div>
       </div>
 
-      <!-- Announcement Item 3 -->
+
       <div class="card mb-4 shadow-sm">
         <div class="card-header bg-warning text-dark">
           <h5 class="mb-0"><i class="fas fa-exclamation-circle"></i> Holiday Notice</h5>
@@ -163,7 +163,7 @@
         </div>
       </div>
 
-      <!-- Announcement Item 4 -->
+-
       <div class="card mb-4 shadow-sm">
         <div class="card-header bg-info text-white">
           <h5 class="mb-0"><i class="fas fa-info-circle"></i> New Feature Release</h5>
@@ -175,7 +175,7 @@
         </div>
       </div>
       
-      <!-- Additional Content -->
+-
       <div class="card mb-4 shadow-sm">
         <div class="card-header bg-secondary text-white">
           <h5 class="mb-0"><i class="fas fa-lightbulb"></i> Special Workshop Announcement</h5>
@@ -192,8 +192,6 @@
 
   <button id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     $(document).ready(function(){
 
